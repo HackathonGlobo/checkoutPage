@@ -1,6 +1,7 @@
 <html>   
     <head>
         <title>Globo Play</title>
+        <meta charset="utf-8">
         <style>
 
             body {
@@ -84,6 +85,34 @@
                 margin: 0 auto;
                 display: block;
             }
+
+            .in-container .text .price {
+                width: 75%;
+                margin: 0 auto;
+                text-align: center;
+                font-family: "Helvetica Neue", sans-serif;
+                color: #666;
+
+                background-color: #F5F5F5;
+                border: 2px solid #EEE;
+                border-radius: 8px;
+                padding: 10px;
+            }
+
+            .in-container .text .from {
+                color: #D72219;
+                font-size: 16px;
+                margin-bottom: 5px;
+                display: inline-block;
+            }
+
+            .in-container .text .to {
+                font-size: 18px;
+            }
+
+            .in-container .text .to .green {
+                color: green;
+            }
         </style>
         <script type="text/javascript">
           function onVisaCheckoutReady (){
@@ -92,12 +121,9 @@
                         currencyCode: "BRL",
                         total: "11.32"
                     }});
-            V.on("payment.success", function(payment)
-              {alert(JSON.stringify(payment)); });
-            V.on("payment.cancel", function(payment)
-              {alert(JSON.stringify(payment)); });
-            V.on("payment.error", function(payment, error)
-              {alert(JSON.stringify(error)); });
+            V.on("payment.success", function(payment) {
+                location.href="confirm.html";
+            });
           }
         </script>
     </head> 
@@ -107,8 +133,12 @@
             <h1>Globo Play</h1>
         </div>
         <div class="text">
-            <img alt="Visa Checkout" class="v-button" role="button" src="https://sandbox.secure.checkout.visa.com/wallet-services-web/xo/button.png"/>
+            <div class="price">
+                <span class="from"><strike>De R$14,99/mês</strike></span><br>
+                <span class="to"><b>Por <span class="green">R$11,42/mês</span></b></span>
+            </div>
             <h4>Assine agora com seu Visa e ganhe 5% de desconto!</h4>
+            <img alt="Visa Checkout" class="v-button" role="button" src="https://sandbox.secure.checkout.visa.com/wallet-services-web/xo/button.png"/>
         </div>
         <script type="text/javascript" src="https://sandbox-assets.secure.checkout.visa.com/
 checkout-widget/resources/js/integration/v1/sdk.js"></script>

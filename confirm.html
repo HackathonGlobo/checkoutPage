@@ -1,0 +1,103 @@
+<html>
+    <head>
+        <title>Compra Realizada!</title>
+        <meta charset="utf-8">
+        <style>
+            body {
+                margin: 0;
+            }
+
+            .in-container .img-title {
+                background-image: url('play.jpg');
+                height: 150px;
+                position: relative;
+                background-position: center;
+                background-size: cover;
+                margin-bottom: 20px;
+            }
+
+            .in-container .img-title h1 {
+                position: absolute;
+                bottom: 0;
+                left: 0;
+                display: block;
+                margin: 10px;
+                color: white;
+                font-family: "Open Sans", "Helvetica Neue";
+                font-size: 26px;
+                font-weight: 800;
+                text-shadow: 0 1px 5px rgba(0, 0, 0, 0.4); 
+            }
+
+            .in-container .img-title .title-backdrop {
+                position: absolute;
+                bottom: 0;
+                width: 100%;
+                height: 100px;
+                background-color: black;
+
+                background: rgb(0, 0, 0);
+                background: -moz-linear-gradient(270deg, rgba(0, 0, 0, 0.5) 30%, rgba(0, 0, 0, 0) 90%);
+                background: -webkit-linear-gradient(270deg, rgba(0, 0, 0, 0.5) 30%, rgba(0, 0, 0, 0) 90%);
+                background: -o-linear-gradient(270deg, rgba(0, 0, 0, 0.5) 30%, rgba(0, 0, 0, 0) 90%);
+                background: -ms-linear-gradient(270deg, rgba(0, 0, 0, 0.5) 30%, rgba(0, 0, 0, 0) 90%);
+                background: linear-gradient(0deg, rgba(0, 0, 0, 0.5) 30%, rgba(0, 0, 0, 0) 90%);
+            }
+
+            .in-container .text {
+                padding: 0 10px;
+            }
+
+            .in-container .text h4 {
+                font-family: "Open Sans", "Helvetica Neue";
+                font-weight: 600;
+                font-size: 22px;
+                color: green;
+                text-align: center;
+                margin-bottom: 0;
+            }
+
+            .in-container .text h5 {
+                font-family: "Open Sans", "Helvetica Neue";
+                font-weight: 600;
+                font-size: 18px;
+                color: #666;
+                text-align: center;
+                margin-top: 5px;
+            }
+
+            .in-container button {
+                background-color: #EC7D00;
+                display: block;
+                margin: 0 auto;
+                border: none;
+                border-radius: 12px;
+                padding: 10px 20px;
+                font-size: 18px;
+                color: #F0F0F0;
+                font-weight: bold;
+                font-family: "Helvetica Neue";
+            }
+
+            .in-container .text img {
+                display: block;
+                margin: 0 auto;
+                margin-bottom: -15px;
+                width: 100px;
+            }
+
+        </style>
+    </head>
+    <body class="in-container">
+        <div class="img-title img-play">
+            <div class="title-backdrop"></div>
+            <h1>Globo Play</h1>
+        </div>
+        <div class="text">
+            <img src="check.png">
+            <h4>Compra realizada com sucesso!</h4>
+            <h5>Aproveite seu Globo Play.</h5>
+            <button on-click="window.close()">Voltar</button>
+        </div>
+    </body>
+</html>
